@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 实现一个正方形和一个按钮，点击这个按钮的时候能够让正方形切换显示隐藏 -->
+
+    <!-- block, inline-block,inline -->
+    <div style="width: 200px;height:200px;background-color: red;"></div>
+    <button>button</button>
+
+    <script>
+
+        //display:none
+        // opacity:0    
+        const oDiv = document.querySelector('div')
+        const btn = document.querySelector('button')
+        btn.addEventListener('click', () => {
+            if (getComputedStyle(oDiv).display === 'none') {
+                oDiv.style.display = 'block'
+            } else {
+                oDiv.style.display = 'none' // style形式只能改样式,不能查样式 , 查样式要通过另一个 api, getComputedStyle()
+            }
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>xxx</button>
+
+    <script>
+        // function fn() {
+        //     console.log(this);
+        // }
+
+        // fn(); // 全局作用域里执行的代码 this 指向的就是 window 也就是全局作用域
+
+        // const obj = {
+        //     a() {
+        //         console.log(this);
+        //     },
+        // };
+
+        // obj.a(); //~ obj  对象里面的函数执行,.前面是谁,this 就指向谁
+
+
+        // setTimeout(() => {
+        //     console.log(this); // window
+        // }, 1000);
+
+        //事件处理函数
+        const btn = document.querySelector('button')
+        btn.addEventListener('click', () => {
+            console.log(this); // 指向事件源
+        })
+
+
+    </script>
+</body>
+
+</html>
