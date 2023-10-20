@@ -11,4 +11,6 @@
 // console.log(obj.name);
 
 // console.log(0 % 2);
-console.log(1 << 3); //
+console.log(1 >> 3); //
+
+console.log(5 >> 2);
