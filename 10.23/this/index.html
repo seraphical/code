@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<>
+    <div style="height: 200px;border: 1px solid #333;"></div>
+    <input type="text" />
+    <script>
+        const div = document.querySelector('div')
+        const input = document.querySelector('input')
+        input.addEventListener('input', (e) => {
+            console.log('我输入了', e.target.value);
+        })
+        // div.onclick = function(){
+        //     console.log(this);
+        // }
+
+        // function handler() {
+        //     console.log(this);  //事件处理函数中的 this 指向事件源
+        // }
+        // div.addEventListener('click', handler)
+
+        // (() => {
+        //     console.log(this);
+        // })();
+
+
+
+
+        // 箭头函数
+        //  箭头函数里面其实是没有 this 的,箭头函数里的 this 是外部作用域的 this
+        // div.onclick = () => {
+        //     console.log(this); //window
+        // }
+
+        // const obj = {
+        //     fn: function (a, b) {
+        //         console.log(this, a, b);
+        //     },
+        // };
+        // const obj2 = {}
+        // setTimeout(obj.fn.bind(obj2, 1, 2), 1000);
+
+        // function handler() {
+        //     console.log(this);
+        // }
+        // // //指向 window
+        // div.addEventListener('click', handler.bind())
+
+
+        // function handler() {
+        //     console.log(this);
+        // }
+
+        const handler = (e) => {
+            e.preventDefault();
+
+            console.log(' 我执行了')
+        }
+        // //指向 window
+        div.addEventListener('contextmenu', handler)
+    </script>
+    </body>
+
+</html>
