@@ -1,4 +1,4 @@
-const a = '1';
+const a = 3;
 
 switch (a) {
   case 1:
@@ -15,3 +15,14 @@ let a = 1; //=> string  '1'
 let b = String(a);
 
 let c = a + '1'; //'11'
+
+
+
+
+100 优
+>80 良
+>60 及格
+
+switch(number/10){
+  case 7
+}
