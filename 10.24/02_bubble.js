@@ -70,3 +70,5 @@ var bubbleSort = function (array) {
 
   return array;
 };
+
+发送的发的算法;
